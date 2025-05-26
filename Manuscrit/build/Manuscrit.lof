@@ -1,0 +1,13 @@
+\babel@toc {french}{}\relax 
+~\hfill \textbf {Page}\par 
+\contentsline {xpart}{Titre partie 1}{4}{part.1}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Chapitre 1}{4}{chapter.1}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Exemple de figure simple\relax }}{5}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Exemple de Figures multiple\relax }}{6}{figure.caption.12}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Chapitre 2}{9}{chapter.2}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Annexe A}{IV}{appendix.A}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Annexe B}{VI}{appendix.B}%

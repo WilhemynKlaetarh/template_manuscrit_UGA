@@ -1,0 +1,240 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                meta-donnees style              		 %%
+%%    pour produire la Page de Garde des theses       %%
+%%      de la CUGA                  				 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Fichier encodé au format UTF8          %%
+
+
+\NeedsTeXFormat{LaTeX2e}[2003/12/01]
+%\ProvidesPackage{meta-donnees}[2011/02/25 v0.01]
+\DeclareOption{a4paper}
+   {\setlength\paperheight {297mm}
+    \setlength\paperwidth  {210mm}}
+\ProcessOptions\relax
+\AtBeginDocument{\ifx\includegraphics\undefined\RequirePackage{graphicx}\fi
+\ifx\colorbox\undefined\RequirePackage{color}\fi}
+
+
+
+
+
+
+\long\def\Universite#1{\gdef\@Universite{#1}}
+\def\@Universite{\includegraphics[width=4cm]{logo_UGA_couleur_cmjn.png}}
+
+\long\def\Grade#1{\gdef\@Grade{#1}}
+\def\@Grade{\hspace{1cm}\uppercase{docteur de l'université grenoble alpes}}   
+
+\long\def\Specialite#1{\gdef\@Specialite{#1}}
+\def\@Specialite{}
+
+\long\def\Arrete#1{\gdef\@Arrete{#1}}
+\def\@Arrete{25 mai 2016}  
+
+\long\def\Auteur#1{\gdef\@Auteur{#1}}
+\def\@Auteur{}    
+
+\long\def\Laboratoire#1{\gdef\@Laboratoire{#1}}
+\def\@Laboratoire{} 
+
+\long\def\EcoleDoctorale#1{\gdef\@EcoleDoctorale{\bfseries#1}}
+\def\@EcoleDoctorale{}
+
+\long\def\Titre#1{\gdef\@Titre{#1}}
+\def\@Titre{}	
+  
+\long\def\TitreEn#1{\gdef\@TitreEn{#1}}
+\def\@TitreEn{}
+  
+\long\def\Soustitre#1{\gdef\@Soustitre{#1}}
+\def\@Soustitre{}  
+  
+\long\def\Depot#1{\gdef\@Depot{#1}}
+\def\@Depot{}    
+   
+\long\def\Direction#1{\gdef\@Direction{#1}}
+\def\@Direction{}     
+
+\long\def\Rapporteurs#1{\gdef\@Rapporteurs{#1}}
+\def\@Rapporteurs{}   
+
+\long\def\Jury#1{\gdef\@Jury{#1}}
+\def\@Jury{}        
+
+\def\UGTPresident#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\[-2mm]\hspace*{1.5mm}#2\hfill Président\\[0mm]}
+\def\UGTPresidente#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\[-2mm] \hspace*{1.5mm}#2\hfill Présidente\\[0mm]}
+\def\UGTRapporteur#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Rapporteur\\[0mm]}
+\def\UGTRapporteurSection#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill\\[0mm]}
+\def\UGTRapporteure#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Rapporteure\\[0mm]}
+\def\UGTRapportrice#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Rapportrice\\[0mm]}
+\def\UGTExaminateur#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Examinateur\\[0mm]}
+\def\UGTExaminatrice#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Examinatrice\\[0mm]}
+\def\UGTInvitee#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Invitée\\[0mm]}
+\def\UGTInvite#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Invité\\[0mm]}
+\def\UGTDirecteur#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Directeur de thèse\\[0mm]}
+\def\UGTDirectrice#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Directrice de thèse\\[0mm]}
+\def\UGTCoDirecteur#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Co-Directeur de thèse\\[0mm]}
+\def\UGTCoDirectrice#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Co-Directrice de thèse\\[0mm]}
+\def\UGTCoEncadrant#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Co-Encadrant de thèse\\[0mm]}
+\def\UGTCoEncadrante#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Co-Encadrante de thèse\\[0mm]}
+
+\newcommand{\UGTNewJuryCategory}[2]{%
+  \csname#1\endcsname={}%
+  \expandafter\def\csname#1\endcsname##1##2{{\bfseries\fontsize{12}{14}\selectfont##1}\\ ##2, #2\\[0.5mm]}}
+         
+%\newcommand{\@ThesisHead}{{\@Universite}}
+%\newcommand\ThesisHead[1]{\renewcommand{\@ThesisHead}{{#1}}}
+\newcommand{\@ThesisHead}{{\@Universite}}
+\newcommand\ThesisHead[1]{\renewcommand{\@ThesisHead}{{#1}}}
+        
+\newcommand{\@ThesisType}{\uppercase{Thèse}}
+\newcommand\ThesisType[1]{\renewcommand{\@ThesisType}{{#1}}}
+
+\newcommand{\@ThesisInOrderToGet}{Pour obtenir le grade de}
+\newcommand\ThesisInOrderToGet[1]{\renewcommand{\@ThesisInOrderToGet}{{#1}}}
+
+\newcommand{\@ThesisDiploma}{{\@Grade}}
+\newcommand\ThesisDiploma[1]{\renewcommand{\@ThesisDiploma}{{#1}}}
+
+\newcommand{\@ThesisSpeciality}{{Spécialité~: {\bfseries\@Specialite}}}
+\newcommand\ThesisSpeciality[1]{\renewcommand{\@ThesisSpeciality}{{#1}}}
+
+\newcommand{\@ThesisMinisterialDecree}{Arrêté ministériel~:}
+\newcommand\ThesisMinisterialDecree[1]{\renewcommand{\@ThesisMinisterialDecree}{{#1}}}
+
+\newcommand{\@ThesisMinisterial}{\@ThesisMinisterialDecree\ \@Arrete}
+\newcommand\ThesisMinisterial[1]{\renewcommand{\@ThesisMinisterial}{{#1}}}
+
+\newcommand{\@ThesisPresentedBy}{{Présentée par :}}
+\newcommand\ThesisPresentedBy[1]{\renewcommand{\@ThesisPresentedBy}{{#1}}}
+
+\newcommand{\@ThesisAuthor}{{\@Auteur}}
+\newcommand\ThesisAuthor[1]{\renewcommand{\@ThesisAuthor}{{#1}}}
+
+\newcommand{\@ThesisDirectedBy}{{\textcolor{orangeUni}{\fontsize{13}{14}\selectfont Direction de thèse :}}}
+
+\newcommand{\@ThesisJRapporteurs}{{\textcolor{orangeUni}{\fontsize{13}{14}\selectfont Rapporteurs :}}}
+
+\newcommand{\@ThesisDefendedJury}{{\textcolor{orangeUni}{\fontsize{13}{14}\selectfont Thèse soutenue publiquement le {\bfseries\@Depot}, devant le jury composé de~:}}}
+
+\newcommand{\@ThesisPreparedIn}{Unité de recherche : }
+\newcommand\ThesisPreparedIn[1]{\renewcommand{\@ThesisPreparedIn}{{#1}}}
+
+\newcommand{\@ThesisLaboratory}{{\@Laboratoire}}
+\newcommand\ThesisLaboratory[1]{\renewcommand{\@ThesisLaboratory}{{#1}}}
+
+\newcommand{\@ThesisPreparedInED}{École doctorale : }
+\newcommand\ThesisPreparedInED[1]{\renewcommand{\@ThesisPreparedInED}{{#1}}}
+
+\newcommand{\@ThesisEcoleDoctorale}{{\@EcoleDoctorale}}
+\newcommand\ThesisEcoleDoctorale[1]{\renewcommand{\@ThesisEcoleDoctorale}{{#1}}}
+
+\newcommand{\@ThesisTitle}{{\@Titre}}
+\newcommand\ThesisTitle[1]{\renewcommand{\@ThesisTitle}{{#1}}}
+
+\newcommand{\@ThesisSubTitle}{{\@Soustitre}}
+\newcommand\ThesisSubTitle[1]{\renewcommand{\@ThesisSubTitle}{{#1}}}
+
+\newcommand{\@ThesisDirection}{\begin{tabular}{!{\color{orangeUni}\vrule width 2.3pt}@{}p{14.75cm}@{}}\@Direction\end{tabular}}
+
+\newcommand{\@ThesisRapporteurs}{\begin{tabular}{!{\color{orangeUni}\vrule width 2.3pt}@{}p{14.75cm}@{}}\@Rapporteurs\end{tabular}}
+
+%\newcommand{\@ThesisJury}{\begin{tabular}{@{}p{15.1cm}@{}}\@Jury\end{tabular}}
+\newcommand{\@ThesisJury}{\begin{tabular}{!{\color{orangeUni}\vrule width 2.3pt}@{}p{14.75cm}@{}}\@Jury\end{tabular}}
+
+\newcommand{\@UniversityLogo}{\includesvg{couverture_these_bandeau.svg}}
+\newcommand\UniversityLogo[1]{\renewcommand{\@UniversityLogo}{{#1}}}
+
+\newcommand\@UGthesepage@height{28cm}
+\newcommand\@UGthesepage@width{19cm}
+\newlength\@UGTtitlepageshift
+
+\newlength\@Sethpageshift
+\setlength\@Sethpageshift{-6.5mm}
+\newcommand\Sethpageshift[1]{\setlength\@Sethpageshift{#1}}
+\newlength\@Setvpageshift
+\setlength\@Setvpageshift{-15.5mm}
+\newcommand\Setvpageshift[1]{\setlength\@Setvpageshift{#1}}
+
+
+\newcommand{\MakeUGthesePDG}{%
+            \newpage
+            \setlength\@UGTtitlepageshift{\paperwidth}%
+            \addtolength\@UGTtitlepageshift{-\@UGthesepage@width}%
+            \divide\@UGTtitlepageshift2
+            \addtolength\@UGTtitlepageshift{-1in}
+            \thispagestyle{empty}
+            \vglue-\topmargin
+            \vglue-\headheight
+            \vglue-\headsep
+            \vglue-\footskip
+            \vglue\@Setvpageshift
+            \hglue-\ifodd\c@page\oddsidemargin\else\evensidemargin\fi
+            \hglue\@UGTtitlepageshift
+            \hglue-\parindent
+            \hglue\@Sethpageshift
+            \rlap{\vbox to0pt{\vbox to\@UGthesepage@height
+            {\hsize\@UGthesepage@width
+            \fontsize{11}{13}\selectfont\@Thesis@titlep@ge}
+                        \vss
+                       }
+                 }\par
+            \newpage}
+\setlength{\fboxrule}{2pt}
+
+\newcommand\@Thesis@titlep@ge{\fboxsep=-1pt
+\fcolorbox{bleuUni}{white}{%
+    % Contenu principal du cadre
+
+	{\parbox[t][28cm][b]{3.3cm}{\hfil\@UniversityLogo\hfil\par}}\hskip6mm\parbox[t][28cm]{15.1cm}{\sffamily
+%       \vskip3mm plus1fil
+%             \hskip9cm\@ThesisHead
+		\begin{tikzpicture}[remember picture, overlay]
+		\node[yshift=2.03cm, xshift=2.1cm, anchor = north east] at (current page.north east){\@ThesisHead};
+		%\node[yshift=2.23cm, xshift=2.1cm, anchor = north east] at (current page.north east){\@ThesisHead};
+		%\node at (current page.north east){\@ThesisHead};
+		%\node[anchor=north east] at ([xshift=-5mm, yshift=-5mm]current bounding box.north east) {\@ThesisHead};
+		\end{tikzpicture}
+       \vskip1cm
+             {\fontsize{16}{16}\selectfont\@ThesisType}
+       \vskip3mm plus1fil
+             \@ThesisInOrderToGet
+       \vskip2mm plus1fil
+             {\Large{\bfseries\normalsize\fontsize{16}{16}\selectfont\@ThesisDiploma}\par}
+       \vskip3mm plus1fil
+       \@ThesisPreparedInED\ 
+       {\@ThesisEcoleDoctorale}
+       \vskip2mm plus1fil
+             \@ThesisSpeciality   
+       \vskip2mm plus1fil
+       \@ThesisPreparedIn\ 
+       {\@ThesisLaboratory}\\
+       \vskip2mm plus2fil      
+             {\bfseries\fontsize{17}{19}\selectfont\@Titre}\\
+             \vskip1mm plus1fil
+             {\bfseries\fontsize{17}{19}\selectfont\@TitreEn}
+       %\vskip1mm plus1fil
+             %{\fontsize{15}{15}\selectfont\@ThesisSubTitle}
+       \vskip3mm plus2fil
+       {\fontsize{10}{10}\selectfont\@ThesisPresentedBy}
+       \vskip1mm plus1fil
+       {\fontsize{14}{16}\selectfont\bfseries\@ThesisAuthor}
+        \vskip3mm plus2fil
+       \@ThesisDirectedBy\\ 
+       \vskip-3mm plus1fil
+       \hspace{2mm} {\@ThesisDirection}
+       \vskip3mm plus1fil
+       \@ThesisJRapporteurs\\
+       \vskip-3mm plus1fil
+       \hspace{2mm} {\@ThesisRapporteurs}
+       \vskip3mm plus1fil
+       \@ThesisDefendedJury\\
+       \vskip-3mm plus1fil
+       \hspace{2mm} {\fontsize{10}{10}\selectfont\@ThesisJury}
+       \vskip15mm plus1fil
+                      }\hskip3mm
+    }
+                 }
+%
+\endinput

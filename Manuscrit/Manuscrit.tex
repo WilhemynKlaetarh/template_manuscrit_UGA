@@ -1,0 +1,199 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                        THESE DE DOCTEUR EN SI                          % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper,table]{Classe_SYMME}
+
+\usepackage{makecell}
+\usepackage{placeins}
+\usepackage{media9}
+\usepackage{graphicx}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%              Indique le chemin vers les images                %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\graphicspath{{../Page_de_garde/Images/},
+			  {../Remerciement/}, 
+			  {../Introduction/Images/},
+			  {../Chapitre_1/Images/},
+			  {../Chapitre_2/Images/},
+			  %{../Chapitre_3/Images/},
+			  %{../Chapitre_4/Images/},
+			  %{../Chapitre_5/Images/},
+			  %{../Chapitre_6/Images/},
+			  %{../Chapitre_7/Images/},
+			  %{../Chapitre_8/Images/},
+			  {../Conclusion/Images/},
+			  {../Annexes/Images/}}
+			   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      CORPS DU DOCUMENT                        %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                       Option légendes                         %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\figurename}{Figure}  %Changement de Fig. en Figure
+\renewcommand{\tablename}{Tableau}  %Changement de Tab. en Tableau
+
+\dominitoc
+\dominilof
+\dominilot
+\setcounter{mtc}{-2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                        PAGE DE GARDE                          %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Page_de_garde/Page_de_garde_new}
+%\input{../Page_de_garde/PageDeGarde}
+%\includepdf[pages=-]{../Page_de_garde/PageDeGarde.pdf}
+
+
+\pageblanchenoheader
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      Dedicace & Remerciements                              %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cfoot{}
+\input{../Introduction/Dedicace}
+\pageblanchenoheader
+
+\pagenumbering{roman}     
+
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\addtocontents{lot}{~\hfill\textbf{Page}\par}
+\addtocontents{lof}{~\hfill\textbf{Page}\par}
+
+\input{../Introduction/Remerciements}
+\pageblanchenoheader
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      Table des matières, Tables des figures, Liste des tableaux, Glossaire                    %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\input{../Introduction/Sommaire}
+\pageblanchenoheader
+
+\input{../Introduction/Figures}
+\pageblanchenoheader
+
+\input{../Introduction/Tableaux}
+\pageblanchenoheader
+
+\input{../Introduction/Glossaire}
+\pageblanchenoheader
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                         INTRO GENERALE                     %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{../Introduction/Introduction}
+
+\pageblanchenoheader
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                       Chapitre 1 & 2                          %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\part{Titre partie 1}
+\label{pt:I}
+
+\input{../Chapitre_1/Chapitre1}
+\pageblanchenoheader
+\newpage 
+
+\input{../Chapitre_2/Chapitre2}
+\pageblanchenoheader
+\newpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                       Chapitre 3 & 4                          %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\part{Titre partie 2}
+%\label{pt:II}
+
+%\input{../Chapitre_3/Chapitre3}    
+%\pageblanchenoheader
+%\newpage 
+
+%\input{../Chapitre_4/Chapitre4}  
+%\pageblanchenoheader 
+%\newpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                       Chapitre 5 & 6                          %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\part{Titre partie 3}
+%\label{pt:III}
+
+%\input{../Chapitre_5/Chapitre5}  
+%\pageblanchenoheader
+%\newpage 
+
+%\input{../Chapitre_6/Chapitre6}  
+%\pageblanchenoheader
+%\newpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                       Chapitre 7 & 8                          %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\part{Titre partie 4}
+%\label{pt:IV}
+
+%\input{../Chapitre_7/Chapitre7}  
+%\pageblanchenoheader
+%\newpage 
+
+%\input{../Chapitre_8/Chapitre8}  
+%\pageblanchenoheader
+%\newpage 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                       Conclusion                           %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Conclusion/Conclusion}
+\pageblanchenoheader
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                        BIBLIOGRAPHIE                          %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Conclusion/Biblio}
+\pageblanchenoheader
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%                           ANNEXES                             %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thepart}{A}
+\partfin{Annexes}
+\addcontentsline{toc}{part}{Annexes}
+\input{../Annexes/AnnexeA}
+\input{../Annexes/AnnexeB}
+%\input{../Annexes/AnnexeC}
+\pageblanchenoheader 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                      Résumé                                %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{../Page_de_garde/Page_de_couverture}
+
+%%%%%%
+
+\end{document}
