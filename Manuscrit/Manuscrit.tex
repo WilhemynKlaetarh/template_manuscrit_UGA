@@ -182,6 +182,10 @@
 \renewcommand{\thepart}{A}
 \partfin{Annexes}
 \addcontentsline{toc}{part}{Annexes}
+\renewcommand{\thesection}{\thechapter{} - \arabic{section}}
+\renewcommand{\thefigure}{\thechapter{} - \arabic{figure}}
+\renewcommand{\thetable}{\thechapter{} - \arabic{table}}
+\renewcommand{\theequation}{\thechapter{} - \arabic{equation}}
 \input{../Annexes/AnnexeA}
 \input{../Annexes/AnnexeB}
 %\input{../Annexes/AnnexeC}
