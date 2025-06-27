@@ -62,6 +62,9 @@
 \long\def\Jury#1{\gdef\@Jury{#1}}
 \def\@Jury{}        
 
+\long\def\Invites#1{\gdef\@Invites{#1}}
+\def\@Invites{}
+
 \def\UGTPresident#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\[-2mm]\hspace*{1.5mm}#2\hfill Président\\[0mm]}
 \def\UGTPresidente#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\[-2mm] \hspace*{1.5mm}#2\hfill Présidente\\[0mm]}
 \def\UGTRapporteur#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Rapporteur\\[0mm]}
@@ -72,6 +75,7 @@
 \def\UGTExaminatrice#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Examinatrice\\[0mm]}
 \def\UGTInvitee#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Invitée\\[0mm]}
 \def\UGTInvite#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Invité\\[0mm]}
+\def\UGTInviteSection#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill\\[0mm]}
 \def\UGTDirecteur#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Directeur de thèse\\[0mm]}
 \def\UGTDirectrice#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Directrice de thèse\\[0mm]}
 \def\UGTCoDirecteur#1#2{{\hspace*{1.5mm}\bfseries\fontsize{11}{9}\selectfont#1}\\ [-2mm]\hspace*{1.5mm}#2\hfill Co-Directeur de thèse\\[0mm]}
@@ -118,6 +122,8 @@
 
 \newcommand{\@ThesisDefendedJury}{{\textcolor{orangeUni}{\fontsize{13}{14}\selectfont Thèse soutenue publiquement le {\bfseries\@Depot}, devant le jury composé de~:}}}
 
+\newcommand{\@ThesisJInvites}{{\textcolor{orangeUni}{\fontsize{12.5}{14}\selectfont Invité·es :}}} % changer si l'on n'aime pas l'écriture inclusive
+
 \newcommand{\@ThesisPreparedIn}{Unité de recherche : }
 \newcommand\ThesisPreparedIn[1]{\renewcommand{\@ThesisPreparedIn}{{#1}}}
 
@@ -142,6 +148,8 @@
 
 %\newcommand{\@ThesisJury}{\begin{tabular}{@{}p{15.1cm}@{}}\@Jury\end{tabular}}
 \newcommand{\@ThesisJury}{\begin{tabular}{!{\color{orangeUni}\vrule width 2.3pt}@{}p{14.75cm}@{}}\@Jury\end{tabular}}
+
+\newcommand{\@ThesisInvites}{\begin{tabular}{!{\hphantom{\color{white!0}\vrule width 2.3pt}}@{}p{14.75cm}@{}}\@Invites\end{tabular}}
 
 \newcommand{\@UniversityLogo}{\includesvg{couverture_these_bandeau.svg}}
 \newcommand\UniversityLogo[1]{\renewcommand{\@UniversityLogo}{{#1}}}
@@ -232,6 +240,10 @@
        \@ThesisDefendedJury\\
        \vskip-3mm plus1fil
        \hspace{2mm} {\fontsize{10}{10}\selectfont\@ThesisJury}
+       \vskip3mm plus1fil
+       \@ThesisJInvites\\
+       \vskip-3mm plus1fil
+       \hspace{2mm} {\@ThesisInvites}
        \vskip15mm plus1fil
                       }\hskip3mm
     }
