@@ -12,6 +12,9 @@ Important :
 * Pour la moindre question : louiliam.clot@lpsc.in2p3.fr
 * gl;hf
 
+Quelques remarques :
+* Si vous compilez en LuaLaTeX, `\mathbf` ne fonctionne plus. Il faut utiliser `\symbf` à la place. [Source.](https://tex.stackexchange.com/questions/453017/lualatex-packages-for-bold-math-symbols)
+
 -------------------------------------------------------------------------
 
 ## README.md orginal (plus forcément à jour)
